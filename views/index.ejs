@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<% var message = 'cheese, it\'s the best' %>
+<head>
+    <meta charset="utf-8">
+    <title>Node Session Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+<body>
+    POST Data:
+    <br/>
+    <pre id="postData"><%= JSON.stringify(locals.post.data) %></pre> 
+    SESSION ID:
+    <pre><%= locals.session.id %></pre> 
+    SESSION Data:
+    <pre id="sessionData"><%= JSON.stringify(locals.session.data) %></pre>
+
+    <form action="/" method="post">
+        <input type="text" name="key" placeholder="Session key">
+        <input type="text" name="value" placeholder="value">
+        <input type="submit" value="Set Key">
+    </form>
+</body>
+
+</html>
